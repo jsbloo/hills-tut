@@ -1,0 +1,113 @@
+.NavbarItems{
+    background: linear-gradient(90deg, rgb(175, 164, 255) 0%, rgb(96, 92, 170) 100%);
+    height:  80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 40px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.nav-link{
+    color:white;
+    text-decoration: none;
+    padding: 0.5 1rem;
+}
+
+.nav-link:hover{
+    background-color: rgb(45, 44, 65);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+
+.fa-bars{
+    color: white;
+}
+
+.nav-link-mobile{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 1085px) {
+    .NavbarItems{
+        top: 0px;
+        position: absolute;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active{
+        background: rgb(96, 92, 170);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-link{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-link:hover{
+        background-color: rgb(87, 85, 126);
+        border-radius: 0;
+    }
+
+    .navbar-logo{
+        position:   absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%.50%);
+    }
+
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
